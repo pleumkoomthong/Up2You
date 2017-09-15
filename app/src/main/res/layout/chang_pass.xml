@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingPrefix"
+        tools:context="com.example.khonde.myapplication.MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/title_changePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            >
+
+        <ImageView
+            android:contentDescription="@string/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/button_icon_24"
+            />
+
+        <TextView
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="80dp"
+            android:text="@string/change_password"
+            android:textSize="22sp"/>
+
+
+
+    </LinearLayout>
+
+    <EditText
+        fontPath="font/cloud_bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/old_pass"
+        android:padding="10dp"
+        android:background="@drawable/button_bg_rounded_corners6"
+        android:textColorHint="#707070"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/new_pass"
+        android:padding="10dp"
+        android:background="@drawable/button_bg_rounded_corners6"
+        android:textColorHint="#707070"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/confirm_pass"
+        android:padding="10dp"
+        android:background="@drawable/button_bg_rounded_corners6"
+        android:textColorHint="#707070"
+        />
+
+    <Button
+        fontPath="font/cloud_bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/save_text"
+        android:background="@drawable/button_bg_rounded_corners7"
+        android:textSize="18sp"
+        />
+
+</LinearLayout>
+    </ScrollView>

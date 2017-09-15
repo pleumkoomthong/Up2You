@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Up2You</string>
+    <string name="title_name">แนะนำสำหรับคุณ</string>
+    <string name="register">ลงทะเบียน</string>
+    <string name="username">ชื่อผู้ใช้</string>
+    <string name="password">รหัสผ่าน</string>
+    <string name="repassword">ยืนยันรหัสผ่าน</string>
+    <string name="login">เข้าสู่ระบบ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titlename">ชื่อจริง</string>
+    <string name="titlelname">นามสกุล</string>
+    <string name="categorieText">หมวดหมู่ของเพลง</string>
+    <string name="profileimage">profileImage</string>
+    <string name="name">Name</string>
+    <string name="lastname">lastname</string>
+    <string name="titleEmail">อีเมลล์</string>
+    <string name="email">email@gmail.com</string>
+    <string name="tel">เบอร์มือถือ</string>
+    <string name="phone">087-654-3210</string>
+    <string name="backbtn">backBtn</string>
+    <string name="planglooktung">เพลงลูกทุ่ง</string>
+    <string name="intersong">เพลงสากล</string>
+    <string name="stringsong">เพลงสตริง</string>
+    <string name="hintUsername">กรุณากรอกชื่อผู้ใช้</string>
+    <string name="inputPass">ใส่รหัสผ่าน</string>
+    <string name="hello_world_logo">Hello World logo!</string>
+    <string name="fbimage">FbImage</string>
+    <string name="g_image">G+Image</string>
+    <string name="phoneimage">PhoneImage</string>
+    <string name="head">head</string>
+    <string name="sub_head">Sub-Head</string>
+    <string name="change_password">เปลี่ยนรหัสผ่าน</string>
+    <string name="new_pass">รหัสผ่านอันใหม่</string>
+    <string name="old_pass">รหัสผ่านอันเก่า</string>
+    <string name="confirm_pass">ยืนยันรหัสผ่านใหม่</string>
+    <string name="save_text">บันทึกการเปลี่ยนแปลง</string>
+</resources>

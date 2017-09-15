@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world_logo"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+  />
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textSize="18sp" />
+
+            <EditText
+                android:labelFor="@+id/editUsername"
+                android:id="@+id/editUsername"
+                android:inputType="text"
+                android:hint="@string/hintUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/passText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textSize="18sp" />
+
+            <EditText
+                android:labelFor="@+id/editPass"
+                android:hint="@string/inputPass"
+                android:id="@+id/editPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+           <ImageView
+               android:contentDescription="@string/fbimage"
+               android:layout_width="50dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/fb_btn"
+               android:src="@drawable/facebook"
+               />
+
+            <ImageView
+                android:contentDescription="@string/g_image"
+                android:layout_marginStart="10dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/google_btn"
+                android:src="@drawable/googleplus"
+                />
+
+            <ImageView
+                android:contentDescription="@string/phoneimage"
+                android:layout_marginStart="10dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_btn"
+                android:src="@drawable/smartphone"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

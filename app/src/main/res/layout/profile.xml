@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingPrefix"
+        tools:context="com.example.khonde.myapplication.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+        </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="#FF00"
+
+>
+    <ImageView
+        android:contentDescription="@string/profileimage"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:src="@drawable/profile"
+
+        />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/TitleName"
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4c4c4c"
+            android:textSize="18sp"
+            android:text="@string/titlename"
+            />
+    <TextView
+        android:id="@+id/name"
+        fontPath="font/cloud_bold.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="@string/name"
+        />
+    </LinearLayout>
+
+
+<LinearLayout
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+android:layout_marginStart="15dp"
+android:orientation="vertical">
+<TextView
+    android:id="@+id/TitleLastname"
+    fontPath="font/cloud_bold.otf"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#4c4c4c"
+    android:textSize="18sp"
+    android:text="@string/titlelname"
+    />
+<TextView
+    fontPath="font/cloud_bold.otf"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#000"
+    android:textSize="18sp"
+    android:text="@string/lastname"
+    />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:orientation="vertical">
+        <TextView
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4c4c4c"
+            android:textSize="18sp"
+            android:text="@string/titleEmail"
+            />
+        <TextView
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="@string/email"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:orientation="vertical">
+        <TextView
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4c4c4c"
+            android:textSize="18sp"
+            android:text="@string/tel"
+            />
+        <TextView
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="@string/phone"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        fontPath="font/cloud_bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="#4c4c4c"
+        android:background="@drawable/button_bg_rounded_corners5"
+        android:text="แก้ไขรายละเอียดส่วนตัว"/>
+    <Button
+        fontPath="font/cloud_bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="18dp"
+        android:textColor="#4c4c4c"
+        android:background="@drawable/button_bg_rounded_corners5"
+        android:text="เปลี่ยนรหัสผ่าน"/>
+
+    <Button
+        fontPath="font/cloud_bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg_rounded_corners7"
+        android:text="ออกจากระบบ"/>
+
+</LinearLayout>
+
+    </ScrollView>
