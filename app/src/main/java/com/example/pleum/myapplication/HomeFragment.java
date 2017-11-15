@@ -4,29 +4,39 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.pleum.myapplication.apiservices.RequestInterface;
+import com.example.pleum.myapplication.models.AndroidVersion;
+import com.example.pleum.myapplication.models.JSONResponse;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link HomeFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+
 public class HomeFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private RecyclerView recyclerView;
+    private ArrayList<AndroidVersion> data;
+    private DataAdapter adapter;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -34,14 +44,6 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
@@ -65,8 +67,45 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View mView = inflater.inflate(R.layout.fragment_home, container, false);
+        recyclerView = (RecyclerView)mView.findViewById(R.id.card_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        loadJSON();
+
+        return mView;
     }
+
+    private void loadJSON(){
+
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.43.112/up2you/service/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        RequestInterface request = retrofit.create(RequestInterface.class);
+        Call<JSONResponse> call = request.getJSON();
+        call.enqueue(new Callback<JSONResponse>() {
+                             @Override
+            public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
+
+                JSONResponse jsonResponse = response.body();
+                data = new ArrayList<>(Arrays.asList(jsonResponse.getItem()));
+                adapter = new DataAdapter(data);
+                recyclerView.setAdapter(adapter);
+
+               // Toast.makeText(getActivity(), R.string.success,Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<JSONResponse> call, Throwable t) {
+                Log.d("Error",t.getMessage());
+                Toast.makeText(getActivity(), R.string.no_success,Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -81,7 +120,7 @@ public class HomeFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            Toast.makeText(getActivity(),"Home",Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getActivity(), "Home", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -91,18 +130,14 @@ public class HomeFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
+
+
 }
+

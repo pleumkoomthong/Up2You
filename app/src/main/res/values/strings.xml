@@ -15,7 +15,7 @@
     <string name="profileimage">profileImage</string>
     <string name="name">Name</string>
     <string name="lastname">lastname</string>
-    <string name="titleEmail">อีเมลล์</string>
+    <string name="titleEmail">อีเมล</string>
     <string name="email">email@gmail.com</string>
     <string name="tel">เบอร์มือถือ</string>
     <string name="phone">087-654-3210</string>
@@ -36,4 +36,42 @@
     <string name="old_pass">รหัสผ่านอันเก่า</string>
     <string name="confirm_pass">ยืนยันรหัสผ่านใหม่</string>
     <string name="save_text">บันทึกการเปลี่ยนแปลง</string>
+    <string name="textedit_btn">แก้ไขรายละเอียดส่วนตัว</string>
+    <string name="textchangPass">เปลี่ยนรหัสผ่าน</string>
+    <string name="logout_btn">ออกจากระบบ</string>
+    <string name="textedit">แก้ไขรายละเอียดส่วนตัว</string>
+    <string name="editname">Thanawat</string>
+    <string name="hintlastname">Sahasakmontri</string>
+    <string name="gamebangkok_gmail_com">gamebangkok@gmail.com</string>
+    <string name="_66816295666">+66816295666</string>
+    <string name="saveedit">บันทึกการเปลี่ยนแปลง</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+    <string name="search_songText">ค้นหาชื่อเพลงหรือศิลปิน</string>
+    <string name="cate_text">หมวดหมู่ของเพลง</string>
+    <string name="ok">ตกลง</string>
+    <string name="cancle">ยกเลิก</string>
+    <string name="dialogtext">เข้าสู่ระบบเพื่อบันทึกเพลงโปรดของคุณ</string>
+
+    <string name="sample_dialog_message">Hello to the World of Android Development</string>
+    <string name="sample_dialog_confirm">Android challenge accepted</string>
+    <string name="sample_dialog_cancel">Cancelled</string>
+    <string name="hintemailText">กรุณากรอกอีเมล</string>
+    <string name="success">Success</string>
+    <string name="fail">Fail</string>
+    <string name="Success">Success</string>
+    <string name="Fail">Fail</string>
+    <string name="insert_success">ลงทะเบียนสำเร็จ</string>
+    <string name="no_success">เกิดความผิดพลาด</string>
+    <string name="login_success">เข้าสู่ระบบสำเร็จ</string>
+
+    <string name="facebook_app_id">499484550407900</string>
+    <string name="songname">ชื่อเพลง</string>
+    <string name="artistname">ชื่อศิลปิน</string>
+
 </resources>

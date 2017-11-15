@@ -1,42 +1,78 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#000"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.pleum.myapplication.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white"
-       >
+        android:background="@drawable/toolbar"
+        android:orientation="vertical">
 
         <SearchView
+
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/search_bar"
-            android:queryHint="ค้นหาชื่อเพลงหรือศิลปิน"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginEnd="@dimen/five"
+            android:layout_marginStart="@dimen/five"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@drawable/search_drawable"
+            android:queryHint="@string/search_songText"
 
             />
 
-        <TextView
-            android:id="@+id/text1"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingStart="10dp"
-            android:text="@string/title_name"
-            android:textSize="18sp" />
+            android:layout_height="250dp"
+            android:background="@color/colorPrimaryDark">
 
-        <ListView
-            android:id="@+id/list_item"
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/five"
+                android:layout_marginStart="@dimen/five"
+                android:src="@drawable/cover" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/love_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/backdrop_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/backdrop_subtitle"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize18" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/card_recycler_view"
+            android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-        </ListView>
+            android:layout_height="match_parent"
+            />
 
 
     </LinearLayout>

@@ -7,9 +7,143 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <TextView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent"
-        android:text="account" />
+        tools:ignore="MissingPrefix"
+        android:background="@drawable/toolbar"
+        tools:context="com.example.pleum.myapplication.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_marginTop="@dimen/twenty"
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logoforandroid"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen"
+                android:layout_marginTop="@dimen/twenty"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Titleuser"
+                    fontPath="font/cloud_bold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize18" />
+
+                <EditText
+                    android:id="@+id/name"
+                    fontPath="font/cloud_bold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginEnd="@dimen/ten"
+                    android:padding="@dimen/ten"
+                    android:alpha="0.50"
+                    android:background="@drawable/button_bg_rounded_corners9"
+                    android:enabled="false"
+                    android:text="@string/username"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize18" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen"
+                android:layout_marginTop="@dimen/twenty"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Titlepass"
+                    fontPath="font/cloud_bold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize18" />
+
+                <EditText
+                    fontPath="font/cloud_bold.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginEnd="@dimen/ten"
+                    android:padding="@dimen/ten"
+                    android:alpha="0.50"
+                    android:background="@drawable/button_bg_rounded_corners9"
+                    android:enabled="false"
+                    android:inputType="textPassword"
+                    android:text="@string/password"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize18" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/fifty"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:textSize="@dimen/textsize18"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg_rounded_corners"
+            android:text="@string/textchangPass"/>
+
+        <Button
+            fontPath="font/cloud_bold.otf"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_marginBottom="@dimen/twenty"
+            android:textSize="@dimen/textsize18"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg_rounded_corners7"
+            android:text="@string/logout_btn"/>
+
+    </LinearLayout>
+
 
 </FrameLayout>
