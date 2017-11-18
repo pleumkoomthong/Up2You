@@ -73,5 +73,6 @@
     <string name="facebook_app_id">499484550407900</string>
     <string name="songname">ชื่อเพลง</string>
     <string name="artistname">ชื่อศิลปิน</string>
+    <string name="videolink">videolink</string>
 
 </resources>

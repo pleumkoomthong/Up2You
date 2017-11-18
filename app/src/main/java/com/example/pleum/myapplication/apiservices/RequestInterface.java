@@ -1,4 +1,5 @@
 package com.example.pleum.myapplication.apiservices;
+
 import com.example.pleum.myapplication.models.JSONResponse;
 
 import retrofit2.Call;
@@ -12,6 +13,7 @@ public interface RequestInterface {
 
     @GET("allmusic.php")
     Call<JSONResponse> getJSON();
+
 
 
 
